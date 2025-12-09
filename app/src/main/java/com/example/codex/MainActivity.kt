@@ -11,16 +11,20 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.TextAutoSize
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -30,12 +34,12 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             val painter = painterResource(id = R.drawable.mountain)
-            val description = "Login Page"
-            val title = "Login Page"
+            val description = "LOGIN PAGE"
+            val title = "LOGIN PAGE"
             Box(modifier = Modifier
                 .fillMaxWidth()
                 .fillMaxHeight()
-                .padding(16.dp)) {
+                .padding(10.dp)) {
                 ImageCard(
                     painter = painter,
                     contentDescription = description,
@@ -57,11 +61,12 @@ fun ImageCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(15.dp),
+        shape = RoundedCornerShape(16.dp),
     ) {
         Box(
             modifier = Modifier
-                .height(1000.dp)) {
+                .height(1000.dp))
+            {
 
             Image(
                 painter = painter,
@@ -70,10 +75,14 @@ fun ImageCard(
 
             )
             Box(modifier = Modifier
-                .padding(12.dp),
-                contentAlignment = Alignment.BottomStart)
+                .padding(16.dp),
+                contentAlignment = Alignment.TopStart)
             {
-                Text(title, style = TextStyle(color = Color.White, fontSize = 16.sp))
+                Text(title, style = TextStyle(
+                    color = Color.White,
+                    textAlign = TextAlign.Center,
+                    fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+                    fontSize = 20.sp))
             }
 
         }
