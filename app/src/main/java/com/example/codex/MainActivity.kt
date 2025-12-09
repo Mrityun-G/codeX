@@ -61,7 +61,7 @@ fun ImageCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(16.dp),
+        shape = RoundedCornerShape(15.dp),
     ) {
         Box(
             modifier = Modifier
