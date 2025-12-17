@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -65,7 +66,8 @@ fun ImageCard(
     ) {
         Box(
             modifier = Modifier
-                .height(1000.dp))
+                .height(1000.dp)
+                .fillMaxWidth())
             {
 
             Image(
@@ -75,14 +77,15 @@ fun ImageCard(
 
             )
             Box(modifier = Modifier
-                .padding(16.dp),
-                contentAlignment = Alignment.TopStart)
+                .padding(25.dp),
+                contentAlignment = Alignment.BottomCenter
+            )
             {
                 Text(title, style = TextStyle(
                     color = Color.White,
                     textAlign = TextAlign.Center,
-                    fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
-                    fontSize = 20.sp))
+                    fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold,
+                    fontSize = 22.sp))
             }
 
         }
@@ -90,3 +93,4 @@ fun ImageCard(
     }
 
 }
+
