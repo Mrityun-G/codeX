@@ -115,7 +115,7 @@ class MainActivity : ComponentActivity() {
                             color = Color.White,
                             textAlign = TextAlign.Center,
                             fontWeight = FontWeight.SemiBold,
-                            fontSize = 22.sp
+                            fontSize = 25.sp
                         )
                     )
                 }
