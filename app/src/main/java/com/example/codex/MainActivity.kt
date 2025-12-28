@@ -101,6 +101,13 @@ class MainActivity : ComponentActivity() {
                             Text(text = "Learn more",color= Color.White)
 
                         }
+                        OutlinedButton(
+                            modifier = Modifier.padding(10.dp),
+                            onClick = { /*TODO*/ }
+                        ) {
+                            Text(text = "Sign Up",color= Color.White)
+
+                        }
                     }
                 }
             }
@@ -139,8 +146,7 @@ class MainActivity : ComponentActivity() {
                 )
                 {
                     Text(
-                        title, style = TextStyle
-                            (
+                        title, style = TextStyle(
                             color = Color.White,
                             textAlign = TextAlign.Center,
                             fontWeight = FontWeight.SemiBold,
